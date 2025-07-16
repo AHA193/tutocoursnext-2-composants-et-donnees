@@ -13,6 +13,8 @@ console.log(imgObject);
         <div>
         <h1>Une image</h1>
         <img src={imgObject.url} 
+        height="600"
+        width="600"
         alt="" />
         </div>
   )
