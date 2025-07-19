@@ -1,11 +1,20 @@
 "use client"
-import { useState } from 'react'
 
 import React from 'react'
 
+import { useState } from 'react'
+import { getPost } from '@/lib/serverActions'
+
+
 function page() {
   const [inputValue, setInputValue] = useState("") /*instanciation du state */
-  console.log(new Date().getTime())
+  // console.log(new Date().getTime())
+
+  async function handleGetArticle(){
+const post = await getPost(1)
+console.log(post);
+  }
+
   return (
     <div>
       <input 
@@ -15,6 +24,11 @@ function page() {
       onChange={e => setInputValue(e.target.value)}
       />
       <p>Tu as écrit : {inputValue}</p> 
+
+      <button 
+      className='p-4 bg-green-300'
+      onClick={handleGetArticle}
+      >Récupérer un article</button>
     </div>
   )
 }
