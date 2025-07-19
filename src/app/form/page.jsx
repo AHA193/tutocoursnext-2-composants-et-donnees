@@ -5,7 +5,7 @@ import React from 'react'
 
 function page() {
   const [inputValue, setInputValue] = useState("") /*instanciation du state */
-  // console.log(new Date().getTime())
+  console.log(new Date().getTime())
   return (
     <div>
       <input 

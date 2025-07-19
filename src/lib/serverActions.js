@@ -7,3 +7,18 @@ const imgObject = await res.json()
 
 return imgObject
 }
+
+export async function getPosts(){
+     const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+  const posts = await res.json()
+
+  return posts
+}
+
+export async function getPost(id){
+      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  const post = await res.json()
+  console.log(post);
+
+  return post
+}
