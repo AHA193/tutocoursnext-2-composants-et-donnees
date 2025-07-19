@@ -1,12 +1,10 @@
 
 import React from 'react'
+import { getImg } from '@/lib/serverActions';
 
+async function Image() {
 
-async function page() {
-
-
-const res = await fetch ("https://jsonplaceholder.typicode.com/albums/1/photos/1") /*https://jsonplaceholder.typicode.com/photos/1*/
-const imgObject = await res.json()
+  const imgObject = await getImg()
 console.log(imgObject);
 
   return (
@@ -20,5 +18,5 @@ console.log(imgObject);
   )
 }
 
-export default page
+export default Image
  
