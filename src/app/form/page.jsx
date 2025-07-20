@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+// import React from 'react'
 
 import { useState } from 'react'
 import { getPost } from '@/lib/serverActions'
